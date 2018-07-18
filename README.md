@@ -10,3 +10,4 @@ $ chmod +x /usr/lib/zabbix/externalscripts/*.sh
 * restart zabbix agent on Flume hosts.
 * Import zabbix-flume-template to your Zabbix.
 * If you change Apache Flume parameter -Dflume.monitoring.port (default 41414), then you need to edit monitoring port in Zabbix: Configuration -> Templates -> Template App Flume -> Macros -> {$FLUME_PORT}
+* Install https://stedolan.github.io/jq/
