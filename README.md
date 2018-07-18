@@ -17,3 +17,6 @@ If you installed zabbix_get package, you may run :
 zabbix_get -s flumehost1 -k flume.metrics.discovery["SINK"]
 
 ```
+
+#### Notes
+* Tested with Zabbix 3.2 and Flume CDH-5.15-1.cdh5.15.0.p0.52 version.
