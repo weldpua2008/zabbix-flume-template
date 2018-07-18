@@ -9,7 +9,7 @@
     </groups>
     <templates>
         <template>
-            <template>Template  Flume Monitoring via HTTP</template>
+            <template>Template Apache Flume Monitoring via HTTP</template>
             <name>Flume Monitoring via HTTP</name>
             <description>Flume metrics and alerts</description>
             <groups>
@@ -391,7 +391,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Cedato Flume Monitoring via HTTP - Backup:net.tcp.service[tcp,,{#FLUME_METRICS_PORT}].last(5m)}&lt;1</expression>
+                            <expression>{Template Apache Flume Monitoring via HTTP:net.tcp.service[tcp,,{#FLUME_METRICS_PORT}].last(5m)}&lt;1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>Flume &quot;{#FLUME_INSTANCE}&quot; instance is down on {HOST.NAME}</name>
@@ -407,7 +407,7 @@
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Cedato Flume Monitoring via HTTP - Backup:flume.instance.item[{#FLUME_INSTANCE},pcpu,utilization_relative].min(10)}&gt;10</expression>
+                            <expression>{Template Apache Flume Monitoring via HTTP:flume.instance.item[{#FLUME_INSTANCE},pcpu,utilization_relative].min(10)}&gt;10</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>Flume &quot;{#FLUME_INSTANCE}&quot; instance relative load for 10 min &gt; 10% (actual {ITEM.VALUE}) on {HOST.NAME}</name>
@@ -423,16 +423,16 @@
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 0&quot;,#1)}=0&#13;
-or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 1&quot;,#1)}=1&#13;
-or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 2&quot;,#1)}=1&#13;
-or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 3&quot;,#1)}=1&#13;
-or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 4&quot;,#1)}=1&#13;
-or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 5&quot;,#1)}=1&#13;
-or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 6&quot;,#1)}=1&#13;
-or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 7&quot;,#1)}=1&#13;
-or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 8&quot;,#1)}=1&#13;
-or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 9&quot;,#1)}=1</expression>
+                            <expression>{Template Apache Flume Monitoring via HTTP:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 0&quot;,#1)}=0&#13;
+or {Template Apache Flume Monitoring via HTTP:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 1&quot;,#1)}=1&#13;
+or {Template Apache Flume Monitoring via HTTP:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 2&quot;,#1)}=1&#13;
+or {Template Apache Flume Monitoring via HTTP:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 3&quot;,#1)}=1&#13;
+or {Template Apache Flume Monitoring via HTTP:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 4&quot;,#1)}=1&#13;
+or {Template Apache Flume Monitoring via HTTP:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 5&quot;,#1)}=1&#13;
+or {Template Apache Flume Monitoring via HTTP:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 6&quot;,#1)}=1&#13;
+or {Template Apache Flume Monitoring via HTTP:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 7&quot;,#1)}=1&#13;
+or {Template Apache Flume Monitoring via HTTP:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 8&quot;,#1)}=1&#13;
+or {Template Apache Flume Monitoring via HTTP:flume.trapper.discovery[&quot;{#FLUME_METRICS_HOST}&quot;,&quot;{#FLUME_METRICS_PORT}&quot;,&quot;{#FLUME_METRICS_URI}&quot;,&quot;{#FLUME_INSTANCE}&quot;].iregexp(&quot;failed: 9&quot;,#1)}=1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>Flume Trapper is Stagnating for &quot;{#FLUME_INSTANCE}&quot; on {HOST.NAME}</name>
@@ -447,7 +447,7 @@ or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FL
                             <dependencies>
                                 <dependency>
                                     <name>Flume &quot;{#FLUME_INSTANCE}&quot; instance is down on {HOST.NAME}</name>
-                                    <expression>{Cedato Flume Monitoring via HTTP - Backup:net.tcp.service[tcp,,{#FLUME_METRICS_PORT}].last(5m)}&lt;1</expression>
+                                    <expression>{Template Apache Flume Monitoring via HTTP:net.tcp.service[tcp,,{#FLUME_METRICS_PORT}].last(5m)}&lt;1</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
@@ -1346,7 +1346,7 @@ or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FL
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Cedato Flume Monitoring via HTTP - Backup:flume.channel.item[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},ChannelFillPercentage].last(5m)}&gt;{$FLUME_CHANNEL_MAX_FILL}</expression>
+                            <expression>{Template Apache Flume Monitoring via HTTP:flume.channel.item[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},ChannelFillPercentage].last(5m)}&gt;{$FLUME_CHANNEL_MAX_FILL}</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>Flume {#FLUME_METRICS_NAME} fill percentage is greater than {$FLUME_CHANNEL_MAX_FILL}  (actual {ITEM.VALUE1}) on on {HOST.NAME}</name>
@@ -1362,7 +1362,7 @@ or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FL
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Cedato Flume Monitoring via HTTP - Backup:flume.channel.diff[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},EventPutAttemptCount,EventPutSuccessCount].min(5m)}&gt;1000</expression>
+                            <expression>{Template Apache Flume Monitoring via HTTP:flume.channel.diff[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},EventPutAttemptCount,EventPutSuccessCount].min(5m)}&gt;1000</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>Flume {#FLUME_METRICS_NAME} Last interval event put attempts greater than event put success on {HOST.NAME}</name>
@@ -1378,7 +1378,7 @@ or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FL
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Cedato Flume Monitoring via HTTP - Backup:flume.channel.diff[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},EventTakeAttemptCount,EventTakeSuccessCount].min(5m)}&gt;1000</expression>
+                            <expression>{Template Apache Flume Monitoring via HTTP:flume.channel.diff[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},EventTakeAttemptCount,EventTakeSuccessCount].min(5m)}&gt;1000</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>Flume {#FLUME_METRICS_NAME} Last interval event take attempts greater than event put success on {HOST.NAME}</name>
@@ -2076,9 +2076,9 @@ or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FL
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Cedato Flume Monitoring via HTTP - Backup:flume.sink.item[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},ConnectionFailedCount].change()}&gt;0</expression>
+                            <expression>{Template Apache Flume Monitoring via HTTP:flume.sink.item[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},ConnectionFailedCount].change()}&gt;0</expression>
                             <recovery_mode>1</recovery_mode>
-                            <recovery_expression>{Cedato Flume Monitoring via HTTP - Backup:flume.sink.item[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},ConnectionFailedCount].delta(15m)}=0</recovery_expression>
+                            <recovery_expression>{Template Apache Flume Monitoring via HTTP:flume.sink.item[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},ConnectionFailedCount].delta(15m)}=0</recovery_expression>
                             <name>Flume &quot;{#FLUME_INSTANCE}&quot;/&quot;{#FLUME_METRICS_NAME}&quot; Failed connections {ITEM.VALUE} on {HOST.NAME}</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
@@ -2092,7 +2092,7 @@ or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FL
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Cedato Flume Monitoring via HTTP - Backup:flume.sink.diff[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},EventDrainAttemptCount,EventDrainSuccessCount].min(1m)}&gt;1000</expression>
+                            <expression>{Template Apache Flume Monitoring via HTTP:flume.sink.diff[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},EventDrainAttemptCount,EventDrainSuccessCount].min(1m)}&gt;1000</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>Flume &quot;{#FLUME_INSTANCE}&quot;/&quot;{#FLUME_METRICS_NAME}&quot;  Last minute event drain attempts greater than event drain success on {HOST.NAME}</name>
@@ -2659,7 +2659,7 @@ or {Cedato Flume Monitoring via HTTP - Backup:flume.trapper.discovery[&quot;{#FL
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Cedato Flume Monitoring via HTTP - Backup:flume.source.diff[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},EventReceivedCount,EventAcceptedCount].min(1m)}&gt;1000</expression>
+                            <expression>{Template Apache Flume Monitoring via HTTP:flume.source.diff[{#FLUME_INSTANCE},{#FLUME_METRICS_NAME},EventReceivedCount,EventAcceptedCount].min(1m)}&gt;1000</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>Flume {#FLUME_METRICS_NAME} Last minute received events greater than accepted events on {HOST.NAME}</name>
